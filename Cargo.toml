@@ -14,6 +14,11 @@ bench = false
 path = "crates/core/src/main.rs"
 name = "grep"
 
+[lib]
+name = "search"
+version = "0.1.2"
+path = "crates/search/src/lib.rs"
+
 [workspace]
 resolver = "2"
 members = [
