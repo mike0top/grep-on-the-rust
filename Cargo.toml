@@ -1,10 +1,10 @@
 [package]
 name = "grep-on-the-rust"
-version = "0.1.2"
 edition = "2021"
-description = "This is my education project."
+version.workspace = true
+authors.workspace = true
+description.workspace = true
 license = "MIT"
-authors = ["Mike <mikepodkoptop@gmail.com>"]
 
 [dependencies]
 search = { version = "0.1.2", path = "crates/search"}
@@ -14,14 +14,14 @@ bench = false
 path = "crates/core/src/main.rs"
 name = "grep"
 
-[lib]
-name = "search"
-version = "0.1.2"
-path = "crates/search/src/lib.rs"
-
 [workspace]
 resolver = "2"
 members = [
 "crates/core",
 "crates/search"
 ]
+
+[workspace.package]
+version = "0.1.2"
+description = "This is my education project."
+authors = ["Mike <mikepodkoptop@gmail.com>"]
