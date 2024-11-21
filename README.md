@@ -2,7 +2,7 @@
 
 ### Example of using `grep`:
 
-mg [options] [query] [path]
+grep [options] [query] [path]
 
 #### Options:
                   -i -- ignore case
