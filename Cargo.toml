@@ -1,0 +1,21 @@
+[package]
+name = "grep-on-the-rust"
+version = "0.1.2"
+edition = "2021"
+description = "This is my education project."
+license = "MIT"
+
+[dependencies]
+search = { version = "0.1.2", path = "crates/search"}
+
+[[bin]]
+bench = false
+path = "crates/core/src/main.rs"
+name = "grep"
+
+[workspace]
+resolver = "2"
+members = [
+"crates/core",
+"crates/search"
+]
