@@ -3,4 +3,7 @@ name = "search"
 version = "0.1.2"
 edition = "2021"
 
-[dependencies]
+[lib]
+name = "search"
+version = "0.1.2"
+path = "src/lib.rs"

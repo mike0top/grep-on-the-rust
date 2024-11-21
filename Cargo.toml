@@ -4,6 +4,7 @@ version = "0.1.2"
 edition = "2021"
 description = "This is my education project."
 license = "MIT"
+authors = ["Mike <mikepodkoptop@gmail.com>"]
 
 [dependencies]
 search = { version = "0.1.2", path = "crates/search"}
