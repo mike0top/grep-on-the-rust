@@ -1,3 +1,5 @@
+use regex::Regex;
+
 ///#### Example to using this fn
 /**```rust
  * use search::search;
@@ -11,16 +13,12 @@
  * ```
 */
 
-pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> { //! This is fn `search` search query in contents.
-    let mut results = Vec::with_capacity(contents.lines().count());
-
-    for line in contents.lines() {
-        if line.contains(query) {
-            results.push(line);
-        }
-    }
-
-    results
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    let re = Regex::new(query).unwrap();
+    contents
+        .lines()
+        .filter(|line| re.is_match(line))
+        .collect()
 }
 
 ///#### Example to using this fn
@@ -36,21 +34,12 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> { //! This is 
  * ```
 */
 
-pub fn search_case_insensitive<'a>(
-    query: &str,
-    contents: &'a str,
-) -> Vec<&'a str> { //! This is fn `search_case_insensitive` search query in contents with case insensitive.
-    let query = query.to_lowercase();
-
-    let mut results = Vec::with_capacity(contents.lines().count());
-
-    for line in contents.lines() {
-        if line.to_lowercase().contains(&query) {
-            results.push(line);
-        }
-    }
-
-    results
+pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    let re = Regex::new(&format!("(?i){}", regex::escape(query))).unwrap();
+    contents
+        .lines()
+        .filter(|line| re.is_match(line))
+        .collect()
 }
 
 #[cfg(test)]
