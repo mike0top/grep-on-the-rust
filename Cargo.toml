@@ -15,7 +15,6 @@ path = "crates/core/src/main.rs"
 name = "grep"
 
 [workspace]
-resolver = "2"
 members = [
 "crates/core",
 "crates/search"

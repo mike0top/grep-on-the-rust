@@ -5,3 +5,8 @@ edition = "2021"
 
 [dependencies]
 search = { version = "0.1.2", path = "../search"}
+
+[[bin]]
+bench = false
+path = "src/main.rs"
+name = "grep"
