@@ -7,7 +7,7 @@ cargo install core-grep
 ```
 #### grep `search`
 ```
-cargo install grep-search
+cargo add grep-search
 ```
 ### Example of using `grep`:
 ```
