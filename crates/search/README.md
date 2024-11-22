@@ -12,7 +12,7 @@ fn main() {
     assert_eq!(results, vec!["Rust"]) // -> True
 }
 ```
-#### Version `search` -- 0.1.2
+#### Version `search` -- 0.1.3
 
 #### Note:
 - This is part of the `grep` project
