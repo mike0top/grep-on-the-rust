@@ -3,7 +3,7 @@
 version = 3
 
 [[package]]
-name = "core"
+name = "core-grep"
 version = "0.1.2"
 dependencies = [
  "grep-search",
