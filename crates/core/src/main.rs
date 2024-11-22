@@ -19,13 +19,14 @@ fn main() {
         println!("How to use: grep [OPTIONS] [QUERY] [FILE_PATH]");
         println!("-i       ignore case");
         println!("-c       count lines in query");
+        println!("-n       numbers the lines");
         println!("-help    show this message");
         println!("-version show version minigrep");
         process::exit(0);
     }
 
     if config.flags.contains(&"-version".to_string()) { // if -version flag in flags then print version grep and exit process with code 0.
-        println!("Version grep: 0.1.6");
+        println!("Version grep: 0.1.7");
         process::exit(0);
     }
 

@@ -8,11 +8,11 @@ use search::{search, search_case_insensitive};
 fn main() {
     let query = "RUst";
     let contents = "Rust is good language";
-    let results = search_case_insensitive(query, contents);
+    let results = search_case_insensitive(query, contents, false);
     assert_eq!(results, vec!["Rust"]) // -> True
 }
 ```
-#### Version `search` -- 0.1.4
+#### Version `search` -- 0.1.5
 
 #### Note:
 - This is part of the `grep` project
