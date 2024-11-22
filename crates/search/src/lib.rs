@@ -30,7 +30,7 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> { //! This is 
  * fn main() {
  *     let query = "RUst";
  *     let contents = "Rust is good language";
- *     let results = search_case_instnsitive(query, contents);
+ *     let results = search_case_insensitive(query, contents);
  *     assert_eq!(results, vec!["Rust"]) // -> True
  * }
  * ```
