@@ -19,10 +19,11 @@ grep [options] [query] [path]
                   -help -- help
                   -version -- show version grep
 
-#### Version `grep` -- 0.1.5
+#### Version `grep` -- 0.1.6
 
 #### Note:
 - This is my first big project
 #### Links
 - crates.io core grep - https://crates.io/crates/core-grep
 - crates.io search grep - https://crates.io/crates/grep-search
+- github grep - https://github.com/mike0top/grep-on-the-rust

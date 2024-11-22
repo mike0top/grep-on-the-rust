@@ -25,7 +25,7 @@ fn main() {
     }
 
     if config.flags.contains(&"-version".to_string()) { // if -version flag in flags then print version grep and exit process with code 0.
-        println!("Version grep: 0.1.2");
+        println!("Version grep: 0.1.6");
         process::exit(0);
     }
 

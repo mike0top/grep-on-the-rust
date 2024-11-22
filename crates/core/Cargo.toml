@@ -1,6 +1,6 @@
 [package]
 name = "core-grep"
-version = "0.1.5"
+version = "0.1.6"
 edition = "2021"
 description = "This is core grep project."
 authors = ["Mike <mikepodkoptop@gmail.com>"]
