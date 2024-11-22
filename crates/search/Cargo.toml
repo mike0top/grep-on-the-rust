@@ -1,6 +1,6 @@
 [package]
 name = "grep-search"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 description = "This is search query in contents lib."
 authors = ["Mike <mikepodkoptop@gmail.com>"]
