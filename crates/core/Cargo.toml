@@ -1,13 +1,13 @@
 [package]
 name = "core-grep"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 description = "This is core grep project."
 authors = ["Mike <mikepodkoptop@gmail.com>"]
 license = "MIT"
 
 [dependencies]
-grep-search = { version = "0.1.2", path = "../search"}
+grep-search = { version = "0.1.4", path = "../search"}
 
 [[bin]]
 bench = false
