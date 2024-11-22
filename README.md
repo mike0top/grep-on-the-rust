@@ -19,7 +19,7 @@ grep [options] [query] [path]
                   -help -- help
                   -version -- show version grep
 
-#### Version `grep` -- 0.1.2
+#### Version `grep` -- 0.1.3
 
 #### Note:
 - This is my first big project
