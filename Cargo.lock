@@ -6,16 +6,9 @@ version = 3
 name = "core"
 version = "0.1.2"
 dependencies = [
- "search",
+ "grep-search",
 ]
 
 [[package]]
-name = "grep-on-the-rust"
-version = "0.1.2"
-dependencies = [
- "search",
-]
-
-[[package]]
-name = "search"
+name = "grep-search"
 version = "0.1.2"
