@@ -2,6 +2,9 @@
 name = "grep-search"
 version = "0.1.2"
 edition = "2021"
+description = "This is search query in contents lib."
+authors = ["Mike <mikepodkoptop@gmail.com>"]
+license = "MIT"
 
 [lib]
 name = "search"
