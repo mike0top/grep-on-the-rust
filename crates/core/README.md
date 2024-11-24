@@ -21,7 +21,7 @@ grep [options] [query] [path]
                   -help -- help
                   -version -- show version grep
 
-#### Version `grep` -- 0.1.8
+#### Version `grep` -- 0.1.9
 
 #### Note:
 - This is my first big project
@@ -29,6 +29,6 @@ grep [options] [query] [path]
 - crates.io core grep - https://crates.io/crates/core-grep
 - crates.io search grep - https://crates.io/crates/grep-search
 - github grep - https://github.com/mike0top/grep-on-the-rust
-#### Update version -- 0.1.8
-- Add flag -v -- invert match
+#### Update version -- 0.1.9
+- Update function `parse`
 - Update README.md

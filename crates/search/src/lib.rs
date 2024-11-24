@@ -3,48 +3,21 @@ use regex::Regex;
 ///#### Example to using this fn
 /**```rust
  * use search::search;
- * 
+ *
  * fn main() {
  *     let query = "Rust";
  *     let contents = "Rust is good language";
- *     let results = search_case_instnsitive(query, contents, false, false);
- *     assert_eq!(results, vec!["Rust"]) // -> True
+ *     let results = search(query, contents, false, false, false);
+ *     assert_eq!(results, vec!["Rust is good language"]) // -> True
  * }
  * ```
 */
 
-pub fn search<'a>(query: &str, contents: &'a str, number: bool, invert_match: bool) -> Vec<String> {
-    let re = Regex::new(query).unwrap();
-    let mut results = Vec::new();
-
-    for (i, line) in contents.lines().enumerate() {
-        if re.is_match(line) != invert_match {
-            if number {
-                results.push(format!("{}: {}", i + 1, line));
-            } else {
-                results.push(line.to_string());
-            }
-        }
+pub fn search<'a>(query: &str, contents: &'a str, number: bool, invert_match: bool, _case: bool) -> Vec<String> {
+    let mut re = Regex::new(query).unwrap();
+    if _case {
+        re = Regex::new(&format!("(?i){}", regex::escape(query))).unwrap();
     }
-
-    results
-}
-
-///#### Example to using this fn
-/**```rust
- * use search::search_case_insensitive;
- * 
- * fn main() {
- *     let query = "RUst";
- *     let contents = "Rust is good language";
- *     let results = search_case_insensitive(query, contents, false, false);
- *     assert_eq!(results, vec!["Rust"]) // -> True
- * }
- * ```
-*/
-
-pub fn search_case_insensitive<'a>(query: &str, contents: &'a str, number: bool, invert_match: bool) -> Vec<String> {
-    let re = Regex::new(&format!("(?i){}", regex::escape(query))).unwrap();
     let mut results = Vec::new();
 
     for (i, line) in contents.lines().enumerate() {
@@ -66,14 +39,14 @@ mod tests {
 
     #[test]
     fn case_sensitive() {
-        let query = "duct";
+        let query = "Duct";
         let contents = "\
 Rust:
 safe, fast, productive.
 Pick three.
 Duct tape.";
 
-        assert_eq!(vec!["safe, fast, productive."], search(query, contents, false, false));
+        assert_eq!(vec!["Duct tape."],search(query, contents, false, false, false));
     }
 
     #[test]
@@ -87,7 +60,7 @@ Trust me.";
 
         assert_eq!(
             vec!["Rust:", "Trust me."],
-            search_case_insensitive(query, contents, false, false)
+            search(query, contents, false, false, true)
         );
     }
 }

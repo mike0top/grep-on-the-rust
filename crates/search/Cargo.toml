@@ -1,6 +1,6 @@
 [package]
 name = "grep-search"
-version = "0.1.6"
+version = "0.1.7"
 edition = "2021"
 description = "This is search query in contents lib."
 authors = ["Mike <mikepodkoptop@gmail.com>"]
@@ -8,7 +8,7 @@ license = "MIT"
 
 [lib]
 name = "search"
-version = "0.1.2"
+version = "0.1.7"
 path = "src/lib.rs"
 
 [dependencies]

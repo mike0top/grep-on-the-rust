@@ -1,5 +1,9 @@
 {
     "rust-analyzer.linkedProjects": [
         ".\\crates\\core\\Cargo.toml"
-    ]
+    ],
+    "material-icon-theme.folders.associations": {
+        "search":  "Lib",
+        "crates":  "container"
+    }
 }

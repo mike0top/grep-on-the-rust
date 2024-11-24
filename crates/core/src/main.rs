@@ -1,7 +1,7 @@
 use std::process;
 use std::env;
 
-use crate::{config::Config,
+use crate::{config::Config, 
             run::run};
 
 mod config;

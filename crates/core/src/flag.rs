@@ -1,4 +1,4 @@
-use search::{search, search_case_insensitive};
+use search::search;
 
 ///# This enum `ParseResult`.
 #[derive(Debug)]
@@ -24,11 +24,8 @@ pub fn parse<'a>(flags: Vec<String>, query: &str, contents: &'a str) -> ParseRes
         }
     }
 
-    let results = if case_insensitive {
-        search_case_insensitive(query, contents, numbers_lines, invert_match)
-    } else {
-        search(query, contents, numbers_lines, invert_match)
-    };
+    let results = search(query, contents, numbers_lines, invert_match, case_insensitive);
+
 
     if count_lines {
         ParseResult::Count(results.len())
